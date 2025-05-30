@@ -1,0 +1,23 @@
+// Import UIkit components
+@import "node_modules/uikit/src/scss/variables-theme.scss";
+@import "node_modules/uikit/src/scss/mixins-theme.scss";
+@import "node_modules/uikit/src/scss/uikit-theme.scss";
+
+// Your custom styles below
+:root {
+  --primary-color: #0066cc;
+  --secondary-color: #f8f9fa;
+}
+
+// Custom theme overrides
+.uk-navbar-container {
+  background: var(--primary-color) !important;
+}
+
+.uk-navbar-nav>li>a {
+  color: white;
+
+  &:hover {
+    color: var(--secondary-color);
+  }
+}
