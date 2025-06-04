@@ -1,0 +1,52 @@
+// Light Theme Variables
+$primary-color: #4A90E2;
+$secondary-color: #67B246;
+$background-color: #FFFFFF;
+$surface-color: #F5F7FA;
+$text-color: #2C3E50;
+$border-color: #E1E8ED;
+$success-color: #2ECC71;
+$warning-color: #F1C40F;
+$error-color: #E74C3C;
+
+// Theme Configuration
+:root[data-theme="light"] {
+  --f-primary-color: #{$primary-color};
+  --f-secondary-color: #{$secondary-color};
+  --f-background-color: #{$background-color};
+  --f-surface-color: #{$surface-color};
+  --f-text-color: #{$text-color};
+  --f-border-color: #{$border-color};
+  --f-success-color: #{$success-color};
+  --f-warning-color: #{$warning-color};
+  --f-error-color: #{$error-color};
+
+  // Component Specific
+  --f-header-background: #{$surface-color};
+  --f-sidebar-background: #{$background-color};
+  --f-card-background: #{$background-color};
+  --f-input-background: #{$background-color};
+  --f-button-background: #{$primary-color};
+  --f-button-text: #{$background-color};
+}
+
+// UIkit Overrides
+.uk-light {
+  background: var(--f-background-color);
+  color: var(--f-text-color);
+}
+
+.uk-button-primary {
+  background-color: var(--f-primary-color);
+  color: var(--f-button-text);
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+.uk-card {
+  background: var(--f-card-background);
+  border: 1px solid var(--f-border-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

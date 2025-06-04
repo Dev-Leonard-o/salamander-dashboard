@@ -1,0 +1,55 @@
+// Nature Theme Variables
+$primary-color: #2E7D32; // Forest Green
+$secondary-color: #8D6E63; // Wood Brown
+$background-color: #F1F8E9; // Soft Leaf
+$surface-color: #FFFFFF; // Cloud White
+$text-color: #33691E; // Deep Forest
+$border-color: #A5D6A7; // Leaf Edge
+$success-color: #4CAF50; // Fresh Grass
+$warning-color: #FFA000; // Autumn Gold
+$error-color: #D32F2F; // Berry Red
+
+// Theme Configuration
+:root[data-theme="nature"] {
+  --f-primary-color: #{$primary-color};
+  --f-secondary-color: #{$secondary-color};
+  --f-background-color: #{$background-color};
+  --f-surface-color: #{$surface-color};
+  --f-text-color: #{$text-color};
+  --f-border-color: #{$border-color};
+  --f-success-color: #{$success-color};
+  --f-warning-color: #{$warning-color};
+  --f-error-color: #{$error-color};
+
+  // Component Specific
+  --f-header-background: #{$primary-color};
+  --f-sidebar-background: #{$surface-color};
+  --f-card-background: #{$surface-color};
+  --f-input-background: #{$surface-color};
+  --f-button-background: #{$primary-color};
+  --f-button-text: #{$surface-color};
+}
+
+// UIkit Overrides for Nature Theme
+.uk-nature {
+  background: var(--f-background-color);
+  color: var(--f-text-color);
+}
+
+.uk-button-primary {
+  background-color: var(--f-primary-color);
+  color: var(--f-button-text);
+  border-radius: 20px;
+
+  &:hover {
+    background-color: darken($primary-color, 5%);
+    box-shadow: 0 2px 8px rgba(46, 125, 50, 0.3);
+  }
+}
+
+.uk-card {
+  background: var(--f-card-background);
+  border: 1px solid var(--f-border-color);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(165, 214, 167, 0.2);
+}

@@ -1,9 +1,14 @@
 import './bootstrap';
+import '../css/app.scss';
+import '../css/themes.scss';
+import './theme-switcher';
+
+// Import UIkit
 import UIkit from 'uikit';
 import Icons from 'uikit/dist/js/uikit-icons';
 
-// Loads the Icon plugin
+// Load UIkit Icons
 UIkit.use(Icons);
 
-// Your custom JavaScript below
+// Make UIkit available globally
 window.UIkit = UIkit;

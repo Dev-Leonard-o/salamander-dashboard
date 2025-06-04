@@ -1,0 +1,76 @@
+// Dark Theme Variables
+$primary-color: #6C5CE7;
+$secondary-color: #00B894;
+$background-color: #1A1B1E;
+$surface-color: #2D2E32;
+$text-color: #FFFFFF;
+$border-color: #3F3F3F;
+$success-color: #00B894;
+$warning-color: #FDCB6E;
+$error-color: #FF7675;
+
+// Theme Configuration
+:root[data-theme="dark"] {
+  --f-primary-color: #{$primary-color};
+  --f-secondary-color: #{$secondary-color};
+  --f-background-color: #{$background-color};
+  --f-surface-color: #{$surface-color};
+  --f-text-color: #{$text-color};
+  --f-border-color: #{$border-color};
+  --f-success-color: #{$success-color};
+  --f-warning-color: #{$warning-color};
+  --f-error-color: #{$error-color};
+
+  // Component Specific
+  --f-header-background: #{$surface-color};
+  --f-sidebar-background: #{$background-color};
+  --f-card-background: #{$surface-color};
+  --f-input-background: #{$background-color};
+  --f-button-background: #{$primary-color};
+  --f-button-text: #{$text-color};
+}
+
+// UIkit Overrides
+.uk-dark {
+  background: var(--f-background-color);
+  color: var(--f-text-color);
+}
+
+.uk-button-primary {
+  background-color: var(--f-primary-color);
+  color: var(--f-button-text);
+
+  &:hover {
+    background-color: lighten($primary-color, 10%);
+  }
+}
+
+.uk-card {
+  background: var(--f-card-background);
+  border: 1px solid var(--f-border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+// Dark Mode Specific Styles
+.uk-table {
+  color: var(--f-text-color);
+
+  th {
+    color: var(--f-text-color);
+    background: var(--f-surface-color);
+  }
+}
+
+.uk-input,
+.uk-select,
+.uk-textarea {
+  background-color: var(--f-input-background);
+  color: var(--f-text-color);
+  border-color: var(--f-border-color);
+
+  &:focus {
+    background-color: var(--f-input-background);
+    color: var(--f-text-color);
+    border-color: var(--f-primary-color);
+  }
+}

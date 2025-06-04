@@ -7,7 +7,9 @@ export default defineConfig({
         laravel({
             input: [
                 'resources/css/app.scss',
+                'resources/css/themes.scss',
                 'resources/js/app.js',
+                'resources/js/theme-switcher.js',
             ],
             refresh: true,
         }),
